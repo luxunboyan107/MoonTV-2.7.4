@@ -1,5 +1,5 @@
 # MoonTV (源碼 最後的版本)
-## 很辛苦找到的 =p
+## 很辛苦找到的 =p 歡迎 Fork ... 並更改其他名稱為專案名稱，以免被刪除。
 
 <div align="center">
   <img src="public/logo.png" alt="LibreTV Logo" width="120">
@@ -156,9 +156,9 @@
 ```bash
 # 拉取預構建鏡像
 # 推薦使用具體版本號標簽，確保穩定性
-docker pull ghcr.io/lunatechlab/moontv:1.0.4
+docker pull ghcr.io/lunatechlab/moontv:1.1.1
 # 或拉取最新版本
-docker pull ghcr.io/lunatechlab/moontv:latest
+docker pull ghcr.io/tharinwong/moontv:latest
 
 # 運行容器
 # -d: 後台運行  -p: 映射端口 3000 -> 3000
@@ -167,9 +167,9 @@ docker run -d --name moontv -p 3000:3000 --env PASSWORD=your_password ghcr.io/lu
 
 #### 可用標簽
 
-- `ghcr.io/lunatechlab/moontv:1.0.4` - 具體版本號，推薦用于生産環境
-- `ghcr.io/lunatechlab/moontv:latest` - 最新版本，可能包含最新功能但也可能有未測試的變化
-- `ghcr.io/lunatechlab/moontv:pr-{number}` - PR 構建版本，用于測試新功能
+- `ghcr.io/tharinwong/moontv:1.1.1` - 具體版本號，推薦用于生産環境
+- `ghcr.io/tharinwong/moontv:latest` - 最新版本，可能包含最新功能但也可能有未測試的變化
+- `ghcr.io/tharinwong/moontv:pr-{number}` - PR 構建版本，用于測試新功能
 
 訪問 `http://服務器 IP:3000` 即可。（需自行到服務器控制台放通 `3000` 端口）
 
@@ -182,7 +182,7 @@ docker run -d --name moontv -p 3000:3000 --env PASSWORD=your_password ghcr.io/lu
 ```yaml
 services:
   moontv-core:
-    image: ghcr.io/lunatechlab/moontv:latest
+    image: ghcr.io/tharinwong/moontv:latest
     container_name: moontv-core
     restart: unless-stopped
     ports:
@@ -199,7 +199,7 @@ services:
 ```yaml
 services:
   moontv-core:
-    image: ghcr.io/lunatechlab/moontv:latest
+    image: ghcr.io/tharinwong/moontv:latest
     container_name: moontv-core
     restart: unless-stopped
     ports:
@@ -285,9 +285,9 @@ NEXT_PUBLIC_DOUBAN_IMAGE_PROXY_TYPE 選項解釋：
   "cache_time": 7200,
   "api_site": {
     "dyttzy": {
-      "api": "http://caiji.dyttzyapi.com/api.php/provide/vod",
-      "name": "電影天堂資源",
-      "detail": "http://caiji.dyttzyapi.com"
+      "api": "http://www.google.com/api.php/provide/vod",
+      "name": "Google API",
+      "detail": "http://api.google.com"
     }
     // ...更多站點
   },
@@ -382,8 +382,4 @@ MoonTV 支持標准的蘋果 CMS V10 API 格式。
 - [CMLiussss](https://github.com/cmliu) — 提供豆瓣 CDN 服務
 - 感謝所有提供免費影視接口的站點。
 
----
-
-## Star 趨勢
-
-[![Stargazers over time](https://starchart.cc/LunaTechLab/MoonTV.svg?variant=adaptive)](https://starchart.cc/LunaTechLab/MoonTV)
+- [Github - senshinya](https://github.com/senshinya) - 該專案主人
